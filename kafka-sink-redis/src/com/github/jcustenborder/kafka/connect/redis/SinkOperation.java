@@ -47,7 +47,7 @@ abstract class SinkOperation {
 
 	public abstract void add(byte[] key, byte[] value);
 
-	public abstract void execute(RedisClusterAsyncCommands<byte[], byte[]> asyncCommands) throws InterruptedException;
+	public abstract void execute(RedisClusterAsyncCommands<String, String> asyncCommands) throws InterruptedException;
 
 	public abstract int size();
 
@@ -93,7 +93,7 @@ abstract class SinkOperation {
 		}
 
 		@Override
-		public void execute(RedisClusterAsyncCommands<byte[], byte[]> asyncCommands) {
+		public void execute(RedisClusterAsyncCommands<String, String> asyncCommands) {
 
 		}
 
